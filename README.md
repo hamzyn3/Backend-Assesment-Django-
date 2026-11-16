@@ -60,11 +60,3 @@ Requests carry test scripts, so the Runner shows pass/fail.
 - The optimum can include tiny top-ups; a minimum-purchase rule would trade a little cost
   for fewer stops.
 
-## 5-minute demo outline
-
-1. (30 s) Postman: run **#1** — show stops, total cost, `meta` (3 calls, ~1.4 s). Run again — 0 calls, ~10 ms.
-2. (30 s) Run **#3** (coordinates → 1 external call) and **#4** (short trip → no stops).
-3. (30 s) Errors #6–#9.
-4. (3 min) Code: `views.py` (flow) → `ors.py` (1 call + cache) → `stations.py` (KD-tree) →
-   `optimizer.py` (greedy rule, the key logic) → `load_fuel_stations.py` (data prep).
-5. (30 s) `python manage.py test routing`.
